@@ -25,3 +25,5 @@ sample.env
 /site/themes/bootup/yarn.lock
 site/themes/bootup/node_modules/
 /site/content
+/site/themes/bootup/src/scss/vendor/slick.scss
+/site/themes/bootup/src/scss/vendor/slick-theme.scss
