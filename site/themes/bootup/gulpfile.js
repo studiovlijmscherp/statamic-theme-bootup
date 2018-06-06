@@ -105,6 +105,9 @@ gulp.task('js',function(){
     }));    
 });
 
+gulp.task('init', ['csscopy','bowerscripts','css', 'js'], function () {
+});
+
 gulp.task('default', ['bowerscripts','css', 'js'], function () {
     gulp.watch("src/scss/*/*.scss", ['css']);
     gulp.watch("src/js/*.js", ['js']);
