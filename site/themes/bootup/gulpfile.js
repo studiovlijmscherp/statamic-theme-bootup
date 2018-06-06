@@ -73,7 +73,7 @@ gulp.task('bowerscripts', function() {
 
 
 gulp.task('css', function () {
-    return gulp.src(config.srcDir+'/scss/style.scss')
+    return gulp.src(config.srcDir+'/scss/bootup.scss')
     .pipe(sass({
         includePaths: [
             config.bootstrapDir + '/scss'
@@ -94,7 +94,7 @@ gulp.task('css', function () {
 gulp.task('js',function(){
   gulp.src('src/js/*.js')
     .pipe(header(banner, { package : package }))
-    .pipe(concat('site_scripts.js'))
+    .pipe(concat('bootup.js'))
     .pipe(gulp.dest(config.publicDir+'/js'))
     .pipe(uglify())
     .pipe(header(banner, { package : package }))
