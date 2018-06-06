@@ -1,8 +1,9 @@
-# statamic-theme-bootup
+# Bootup: Statamic starter Theme
 Minimalistic Bootstrap theme for use with Statamic
 
-## Why should I use this theme? Bootstrap is default included with Statamic.
+## Why should I use this theme instead of the default included (CDN) version
 Simple; this theme uses the latest Bootstrap version (4.1.1), installed locally and ready for your own customizations :-)
+It includes up-to-date Bootstrap 4 partials, and more.
 
 ## Installing
 - Drop the theme folder 'bootup' into your site/themes directory
