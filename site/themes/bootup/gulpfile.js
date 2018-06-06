@@ -15,8 +15,8 @@ var gulp = require('gulp'),
 
 var config = {
         bootstrapDir: './node_modules/bootstrap',
-        publicDir: './public/site/themes/bootup',
-        srcDir: './public/site/themes/bootup/src',
+        publicDir: './',
+        srcDir: './src',
     };
 
 var banner = [
@@ -64,7 +64,7 @@ gulp.task('bowerscripts', function() {
       'node_modules/slick-carousel/slick/slick.js'
     ])
     .pipe(concat('vendor.js'))
-    .pipe(gulp.dest(config.publicDir+'/js'))
+    .pipe(gulp.dest(config.srcDir+'/js/'))
     .pipe(notify({
         message: "Vendor JS files concatenated",
     }));
@@ -85,16 +85,11 @@ gulp.task('css', function () {
     .pipe(rename({ suffix: '.min' }))
     .pipe(header(banner, { package : package }))
     .pipe(gulp.dest(config.publicDir+'/css'))
-    .pipe(browserSync.reload({stream:true}))
     .pipe(notify({
         message: "CSS Re-Generated",
     }));
 });
 
-// gulp.task('fonts', function() {
-//     return gulp.src(config.bootstrapDir + '/assets/fonts/**/*')
-//     .pipe(gulp.dest(config.publicDir + '/assets/fonts'));
-// });
 
 gulp.task('js',function(){
   gulp.src('src/js/*.js')
@@ -105,7 +100,6 @@ gulp.task('js',function(){
     .pipe(header(banner, { package : package }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(config.publicDir+'/js'))
-    .pipe(browserSync.reload({stream:true, once: true}))
     .pipe(notify({
         message: "Js files concatenated",
     }));    
