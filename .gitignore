@@ -22,3 +22,5 @@ sample.env
 /sample.web.config
 .DS_Store
 /site/content/globals/global.yaml
+/site/themes/bootup/yarn.lock
+site/themes/bootup/node_modules/
