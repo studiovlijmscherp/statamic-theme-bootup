@@ -24,3 +24,4 @@ sample.env
 /site/content/globals/global.yaml
 /site/themes/bootup/yarn.lock
 site/themes/bootup/node_modules/
+/site/content

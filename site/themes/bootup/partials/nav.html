@@ -1,0 +1,54 @@
+{{# This partial creates a Bootstrap 4 menubar #}}
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    {{# Place your logo-image or brandname in here #}}
+    <a class="navbar-brand" href="#">
+        Navbar
+    </a>
+    
+    <button class="navbar-toggler" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarNavDropdown" 
+            aria-controls="navbarNavDropdown" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>    
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+            {{ nav from="/" include_home="true" max_depth="2" scope="tag"  }}
+            
+            <li class="nav-item {{ if is_current}} active {{ /if }} {{ if children }} dropdown {{ /if }} ">
+              
+                {{ if children }}
+                    <a  class="nav-link dropdown-toggle" 
+                        href="#" 
+                        id="navbarDropdown" 
+                        role="button" 
+                        data-toggle="dropdown" 
+                        aria-haspopup="true" 
+                        aria-expanded="false">
+                        {{ tag:nav_title or title }}
+                    </a>
+                    <div class="dropdown-menu">
+                        {{ children }}
+                            <a class="dropdown-item" href="{{ url }}">{{ tag:nav_title or title }}</a>
+                        {{ /children }}
+                    </div>
+                {{ else }}
+                <a class="nav-link {{ if is_current or is_parent }}active{{ /if }}" href="{{ url }}">{{ tag:nav_title or title }}</a>
+                {{ /if }}
+            </li>
+            {{ /nav }}         
+
+        </ul>
+    </div>
+</nav>
+    
+    
+    
