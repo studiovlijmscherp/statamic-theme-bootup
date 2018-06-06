@@ -1,0 +1,13 @@
+// Bootstrap function and variables
+// import BS4, with custom 'variables' file.
+// we need 'functions' to be imported first, otherwise 'variables' doesn't work
+// we're importing from ./node_modules/bootstrap/scs - this is defined in the gulpfile.js (config.bootstrapDir)
+@import 'mixins/breakpoints';  // import this to be able to use the MS media queries from BS folder
+@import 'functions';
+@import 'modules/variables';
+
+
+//----------------------------------*\
+// VENDOR
+//----------------------------------*/
+@import 'vendor/external';

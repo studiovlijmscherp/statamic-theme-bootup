@@ -1,0 +1,23 @@
+{
+  "name": "statamic-theme-bootup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:studiovlijmscherp/statamic-theme-bootup.git",
+  "author": "Michiel Zoer <studio@vlijmscherp.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "4.1.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-header": "^2.0.5",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5",
+    "slick-carousel": "^1.8.1"
+  }
+}
